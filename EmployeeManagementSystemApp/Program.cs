@@ -9,11 +9,7 @@ namespace EmployeeManagementSystemApp
             // Create an instance of the service
             EmployeeService employeeService = new EmployeeService();
 
-            Console.WriteLine("╔════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║   WELCOME TO EMPLOYEE MANAGEMENT SYSTEM APPLICATION   ║");
-            Console.WriteLine("║                                                        ║");
-            Console.WriteLine("║        Designed for Junior Developers Learning        ║");
-            Console.WriteLine("╚════════════════════════════════════════════════════════╝\n");
+            Console.WriteLine("   WELCOME TO EMPLOYEE MANAGEMENT SYSTEM APPLICATION   \n");
 
             // Add some sample employees for demonstration
             Console.WriteLine("Loading sample data...\n");
@@ -25,9 +21,9 @@ namespace EmployeeManagementSystemApp
             while (isRunning)
             {
                 DisplayMenu();
-                string choice = Console.ReadLine();
+                string? choice = Console.ReadLine();
 
-                switch (choice)
+                switch (choice?.Trim())
                 {
                     case "1":
                         AddNewEmployee(employeeService);
@@ -98,21 +94,21 @@ namespace EmployeeManagementSystemApp
             try
             {
                 Console.Write("Enter First Name: ");
-                string firstName = Console.ReadLine();
+                string? firstName = Console.ReadLine();
 
                 Console.Write("Enter Last Name: ");
-                string lastName = Console.ReadLine();
+                string? lastName = Console.ReadLine();
 
                 Console.Write("Enter Email: ");
-                string email = Console.ReadLine();
+                string? email = Console.ReadLine();
 
                 Console.Write("Enter Department: ");
-                string department = Console.ReadLine();
+                string? department = Console.ReadLine();
 
                 Console.Write("Enter Salary: ");
                 if (decimal.TryParse(Console.ReadLine(), out decimal salary))
                 {
-                    service.AddEmployee(firstName, lastName, email, department, salary);
+                    service.AddEmployee(firstName ?? "Unknown", lastName ?? "Unknown", email ?? "unknown@example.com", department ?? "Unassigned", salary);
                 }
                 else
                 {
@@ -133,9 +129,9 @@ namespace EmployeeManagementSystemApp
             Console.WriteLine("2. Search by Name");
             Console.Write("Enter your choice (1-2): ");
 
-            string choice = Console.ReadLine();
+            string? choice = Console.ReadLine();
 
-            switch (choice)
+            switch (choice?.Trim())
             {
                 case "1":
                     Console.Write("Enter Employee ID: ");
@@ -151,7 +147,7 @@ namespace EmployeeManagementSystemApp
 
                 case "2":
                     Console.Write("Enter Name (First or Last): ");
-                    string name = Console.ReadLine();
+                    string? name = Console.ReadLine();
                     service.SearchEmployeeByName(name);
                     break;
 
@@ -172,16 +168,16 @@ namespace EmployeeManagementSystemApp
                 if (int.TryParse(Console.ReadLine(), out int employeeId))
                 {
                     Console.Write("Enter New First Name: ");
-                    string firstName = Console.ReadLine();
+                    string? firstName = Console.ReadLine();
 
                     Console.Write("Enter New Last Name: ");
-                    string lastName = Console.ReadLine();
+                    string? lastName = Console.ReadLine();
 
                     Console.Write("Enter New Email: ");
-                    string email = Console.ReadLine();
+                    string? email = Console.ReadLine();
 
                     Console.Write("Enter New Department: ");
-                    string department = Console.ReadLine();
+                    string? department = Console.ReadLine();
 
                     Console.Write("Enter New Salary: ");
                     if (decimal.TryParse(Console.ReadLine(), out decimal salary))
@@ -215,9 +211,9 @@ namespace EmployeeManagementSystemApp
                 if (int.TryParse(Console.ReadLine(), out int employeeId))
                 {
                     Console.Write("Are you sure? (yes/no): ");
-                    string confirmation = Console.ReadLine().ToLower();
+                    string? confirmation = Console.ReadLine();
 
-                    if (confirmation == "yes" || confirmation == "y")
+                    if (confirmation?.ToLower() == "yes" || confirmation?.ToLower() == "y")
                     {
                         service.DeleteEmployee(employeeId);
                     }
@@ -242,20 +238,12 @@ namespace EmployeeManagementSystemApp
         {
             int totalEmployees = service.GetTotalEmployees();
             decimal avgSalary = service.GetAverageSalary();
-            var highestPaid = service.GetHighestPaidEmployee();
 
             Console.WriteLine("\n╔════════════════════════════════════════════════════════╗");
             Console.WriteLine("║               EMPLOYEE STATISTICS                      ║");
             Console.WriteLine("╠════════════════════════════════════════════════════════╣");
             Console.WriteLine($"║  Total Employees: {totalEmployees,-45}║");
             Console.WriteLine($"║  Average Salary: {avgSalary:C,-45}║");
-
-            if (highestPaid != null)
-            {
-                Console.WriteLine($"║  Highest Paid: {highestPaid.GetFullName(),-43}║");
-                Console.WriteLine($"║  Their Salary: {highestPaid.Salary:C,-44}║");
-            }
-
             Console.WriteLine("╚════════════════════════════════════════════════════════╝\n");
         }
 
@@ -264,7 +252,7 @@ namespace EmployeeManagementSystemApp
         {
             Console.WriteLine("\n========== SEARCH BY DEPARTMENT ==========");
             Console.Write("Enter Department Name: ");
-            string department = Console.ReadLine();
+            string? department = Console.ReadLine();
 
             service.DisplayEmployeesByDepartment(department);
         }
@@ -275,8 +263,7 @@ namespace EmployeeManagementSystemApp
             service.AddEmployee("John", "Smith", "john.smith@company.com", "IT", 75000);
             service.AddEmployee("Sarah", "Johnson", "sarah.johnson@company.com", "HR", 65000);
             service.AddEmployee("Michael", "Williams", "michael.williams@company.com", "IT", 80000);
-            service.AddEmployee("Emily", "Brown", "emily.brown@company.com", "Finance", 70000);
-            service.AddEmployee("David", "Davis", "david.davis@company.com", "Sales", 60000);
+  
 
             Console.WriteLine("✓ Sample data loaded successfully!\n");
         }

@@ -8,10 +8,10 @@ namespace EmployeeManagementSystemApp.Models
     {
         // Properties (characteristics of an employee)
         public int EmployeeId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Department { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Department { get; set; } = string.Empty;
         public decimal Salary { get; set; }
         public DateTime JoiningDate { get; set; }
 

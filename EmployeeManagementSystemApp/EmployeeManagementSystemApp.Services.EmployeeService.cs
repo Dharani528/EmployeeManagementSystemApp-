@@ -10,13 +10,18 @@ namespace EmployeeManagementSystemApp.Services
     /// </summary>
     public class EmployeeService
     {
-        // In-memory storage for employees (using List collection)
         private List<Employee> employees = new List<Employee>();
         private int nextEmployeeId = 1001;
 
         // Method to add a new employee
         public void AddEmployee(string firstName, string lastName, string email, string department, decimal salary)
         {
+            // Validate input parameters
+            if (string.IsNullOrWhiteSpace(firstName)) firstName = "Unknown";
+            if (string.IsNullOrWhiteSpace(lastName)) lastName = "Unknown";
+            if (string.IsNullOrWhiteSpace(email)) email = "unknown@example.com";
+            if (string.IsNullOrWhiteSpace(department)) department = "Unassigned";
+
             // Create a new employee object
             Employee employee = new Employee
             {
@@ -60,7 +65,7 @@ namespace EmployeeManagementSystemApp.Services
         public void SearchEmployeeById(int employeeId)
         {
             // Use LINQ to find employee
-            Employee employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
+            Employee? employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
 
             if (employee != null)
             {
@@ -75,8 +80,15 @@ namespace EmployeeManagementSystemApp.Services
         }
 
         // Method to search employee by name
-        public void SearchEmployeeByName(string name)
+        public void SearchEmployeeByName(string? name)
         {
+            // Handle null or empty name
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                Console.WriteLine("? Please provide a valid name to search.\n");
+                return;
+            }
+
             // Use LINQ to find employees by first or last name
             List<Employee> results = employees
                 .Where(e => e.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase) || 
@@ -101,17 +113,22 @@ namespace EmployeeManagementSystemApp.Services
         }
 
         // Method to update employee information
-        public void UpdateEmployee(int employeeId, string firstName, string lastName, string email, string department, decimal salary)
+        public void UpdateEmployee(int employeeId, string? firstName, string? lastName, string? email, string? department, decimal salary)
         {
             // Find the employee
-            Employee employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
+            Employee? employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
 
             if (employee != null)
             {
-                employee.FirstName = firstName;
-                employee.LastName = lastName;
-                employee.Email = email;
-                employee.Department = department;
+                if (!string.IsNullOrWhiteSpace(firstName))
+                    employee.FirstName = firstName;
+                if (!string.IsNullOrWhiteSpace(lastName))
+                    employee.LastName = lastName;
+                if (!string.IsNullOrWhiteSpace(email))
+                    employee.Email = email;
+                if (!string.IsNullOrWhiteSpace(department))
+                    employee.Department = department;
+
                 employee.Salary = salary;
 
                 Console.WriteLine($"? Employee with ID {employeeId} updated successfully.\n");
@@ -126,7 +143,7 @@ namespace EmployeeManagementSystemApp.Services
         public void DeleteEmployee(int employeeId)
         {
             // Find and remove the employee
-            Employee employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
+            Employee? employee = employees.FirstOrDefault(e => e.EmployeeId == employeeId);
 
             if (employee != null)
             {
@@ -154,8 +171,8 @@ namespace EmployeeManagementSystemApp.Services
             return employees.Average(e => e.Salary);
         }
 
-        // Method to get highest paid employee
-        public Employee GetHighestPaidEmployee()
+        // Method to get highest paid employee (nullable return)
+        public Employee? GetHighestPaidEmployee()
         {
             if (employees.Count == 0)
                 return null;
@@ -164,8 +181,15 @@ namespace EmployeeManagementSystemApp.Services
         }
 
         // Method to get employees by department
-        public void DisplayEmployeesByDepartment(string department)
+        public void DisplayEmployeesByDepartment(string? department)
         {
+            // Handle null or empty department
+            if (string.IsNullOrWhiteSpace(department))
+            {
+                Console.WriteLine("? Please provide a valid department name.\n");
+                return;
+            }
+
             List<Employee> results = employees
                 .Where(e => e.Department.Equals(department, StringComparison.OrdinalIgnoreCase))
                 .ToList();
