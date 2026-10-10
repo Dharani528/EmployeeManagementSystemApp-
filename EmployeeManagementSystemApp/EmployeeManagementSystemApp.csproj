@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="EmployeeManagementSystemApp.Week2\**" />
+    <Content Remove="EmployeeManagementSystemApp.Week2\**" />
+    <EmbeddedResource Remove="EmployeeManagementSystemApp.Week2\**" />
+    <None Remove="EmployeeManagementSystemApp.Week2\**" />
+  </ItemGroup>
+
 </Project>
