@@ -1,0 +1,71 @@
+@baseUrl = http://localhost:5265
+
+GET {{baseUrl}}/api/departments
+
+###
+
+GET {{baseUrl}}/api/departments/1
+
+###
+
+GET {{baseUrl}}/api/employees
+
+###
+
+GET {{baseUrl}}/api/employees/1001
+
+###
+
+GET {{baseUrl}}/api/employees/reports/salary-by-department
+
+###
+
+POST {{baseUrl}}/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "Neha",
+  "lastName": "Rao",
+  "email": "neha.rao@company.com",
+  "salary": 65000,
+  "departmentId": 2,
+  "skills": [
+    { "name": "Excel", "years": 2 },
+    { "name": "Communication", "years": 3 }
+  ]
+}
+
+###
+
+PUT {{baseUrl}}/api/employees/1001
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "email": "john.smith@company.com",
+  "salary": 78000,
+  "departmentId": 1
+}
+
+###
+
+PATCH {{baseUrl}}/api/employees/1001
+Content-Type: application/json
+
+{
+  "salary": 80000
+}
+
+###
+
+POST {{baseUrl}}/api/departments/1/raise
+Content-Type: application/json
+
+{
+  "percent": 5
+}
+
+###
+
+DELETE {{baseUrl}}/api/employees/1006

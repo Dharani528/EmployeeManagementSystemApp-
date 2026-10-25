@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week4", "EmployeeManagementSystemApp.Week4\EmployeeManagementSystemApp.Week4.csproj", "{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week5", "EmployeeManagementSystemApp.Week5\EmployeeManagementSystemApp.Week5.csproj", "{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x64.Build.0 = Release|Any CPU
 		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x86.ActiveCfg = Release|Any CPU
 		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x86.Build.0 = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|x64.Build.0 = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x64.ActiveCfg = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x64.Build.0 = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
