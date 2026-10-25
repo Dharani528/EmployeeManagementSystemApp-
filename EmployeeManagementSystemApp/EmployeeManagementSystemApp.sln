@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week2", "EmployeeManagementSystemApp.Week2\EmployeeManagementSystemApp.Week2.csproj", "{7E305ADF-50AE-45A1-BD41-F1000265219F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week4", "EmployeeManagementSystemApp.Week4\EmployeeManagementSystemApp.Week4.csproj", "{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{7E305ADF-50AE-45A1-BD41-F1000265219F}.Release|x64.Build.0 = Release|Any CPU
 		{7E305ADF-50AE-45A1-BD41-F1000265219F}.Release|x86.ActiveCfg = Release|Any CPU
 		{7E305ADF-50AE-45A1-BD41-F1000265219F}.Release|x86.Build.0 = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|x64.Build.0 = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Debug|x86.Build.0 = Debug|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x64.ActiveCfg = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x64.Build.0 = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{5451BA9B-4441-4CA7-866C-B86EFF64CBFA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,10 @@
     <Content Remove="EmployeeManagementSystemApp.Week2\**" />
     <EmbeddedResource Remove="EmployeeManagementSystemApp.Week2\**" />
     <None Remove="EmployeeManagementSystemApp.Week2\**" />
+    <Compile Remove="EmployeeManagementSystemApp.Week4\**" />
+    <Content Remove="EmployeeManagementSystemApp.Week4\**" />
+    <EmbeddedResource Remove="EmployeeManagementSystemApp.Week4\**" />
+    <None Remove="EmployeeManagementSystemApp.Week4\**" />
   </ItemGroup>
 
 </Project>
