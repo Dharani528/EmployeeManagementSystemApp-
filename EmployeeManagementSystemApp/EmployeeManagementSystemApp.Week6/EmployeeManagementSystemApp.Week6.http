@@ -1,0 +1,44 @@
+@baseUrl = http://localhost:5286
+@token = paste-jwt-here
+
+### Login as Admin
+POST {{baseUrl}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "userName": "admin",
+  "password": "Admin@123"
+}
+
+### List employees (page, filter, sort) — requires Bearer token
+GET {{baseUrl}}/api/v1/employees?page=1&pageSize=10&search=John&sortBy=salary&sortDir=desc
+Authorization: Bearer {{token}}
+
+### Get employee 1001
+GET {{baseUrl}}/api/v1/employees/1001
+Authorization: Bearer {{token}}
+
+### Create employee (Admin only)
+POST {{baseUrl}}/api/v1/employees
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "firstName": "Neha",
+  "lastName": "Rao",
+  "email": "neha.rao@company.com",
+  "salary": 65000,
+  "departmentId": 2,
+  "skills": [
+    { "name": "Excel", "years": 2 }
+  ]
+}
+
+### Department raise (Admin or HR)
+POST {{baseUrl}}/api/v1/departments/1/raise
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "percent": 5
+}

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week5", "EmployeeManagementSystemApp.Week5\EmployeeManagementSystemApp.Week5.csproj", "{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystemApp.Week6", "EmployeeManagementSystemApp.Week6\EmployeeManagementSystemApp.Week6.csproj", "{A0731CD8-828D-4BB9-9B91-A272C3FD162D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x64.Build.0 = Release|Any CPU
 		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{AB8B26E9-B71C-4C7F-841A-95D4561E29E0}.Release|x86.Build.0 = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|x64.Build.0 = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0731CD8-828D-4BB9-9B91-A272C3FD162D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
